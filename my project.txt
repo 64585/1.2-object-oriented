@@ -1,0 +1,28 @@
+include <iostream>
+using namespace std;
+
+int main() {
+    double salary, bonusAmount;
+    int yearsOfService;
+
+    // Get user input
+    cout << "Enter your salary: ";
+    cin >> salary;
+
+    cout << "Enter your years of service: ";
+    cin >> yearsOfService;
+
+    // Calculate bonus based on years of service
+    if (yearsOfService > 10) {
+        bonusAmount = salary * 0.10; // 10% bonus
+    } else if (yearsOfService >= 6 && yearsOfService <= 10) {
+        bonusAmount = salary * 0.08; // 8% bonus
+    } else {
+        bonusAmount = salary * 0.05; // 5% bonus
+    }
+
+    // Print the net bonus amount
+    cout << "Your net bonus amount is: " << bonusAmount << endl;
+
+    return 0;
+}
